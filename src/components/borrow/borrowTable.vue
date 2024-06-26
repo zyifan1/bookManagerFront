@@ -28,7 +28,7 @@
       </template>
       <template v-else-if="column.key === 'action'">
         <span>
-          <a @click="returnBook(record.bookName)">还书</a>
+          <a @click="returnBook(record.bookName)">{{record.borrowState === '审批中'?'':'还书'}}</a>
         </span>
       </template>
     </template>
